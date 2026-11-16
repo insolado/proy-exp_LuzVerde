@@ -8,6 +8,10 @@
 #include <HTTPClient.h>
 #include <vector>
 #include <algorithm>
+// ================= ACLARACION =================
+// TODO EL TEXTO QUE ESTE CON VARIAS X SIGNIFICA QUE ESTA CENSURADO, ESTO LO HICIMOS PARA PROTEGER
+// ALGUNAS COSAS PRIVADAS COMO EL TOKEN DEL BOT, NOSOTROS LO TENEMOS, SOLAMENTE QUE EN GITHUB
+// PREFERIMOS HACER ESTO ANTES QUE PONERLO EN UN .env
 
 // ================= CONFIGURACION =================
 const char* AP_SSID     = "LuzVerde";
@@ -15,32 +19,25 @@ const char* AP_PASSWORD = "reaccion123";   // minimo 8 caracteres
 
 const int PIN_BOTON_REACCION = 27;         // boton arcade (mide el tiempo): GPIO27 y GND
 const int PIN_BOTON_START    = 26;         // boton START (arranca la ronda): GPIO26 y GND
-const int PIN_LED_BOTON      = 25;         // LED del boton de reaccion: se prende cuando esta en VERDE (GPIO25)
+const int PIN_LED_BOTON      = 25;         // LED del boton de reaccion: se prende cuando esta en VERDE (GPIO25), NO FUNCIONO AUNQUE EN EL CODIGO ESTA.
 const unsigned long DEBOUNCE_MS = 40;
 
-const char* CLAVE_ADMIN = "Marcos_Gero123";  // contrasena del panel: http://192.168.4.1/panel
+const char* CLAVE_ADMIN = "xxxxx";  // contrasena del panel: http://192.168.4.1/panel
 
-// ---------- CONTROL REMOTO POR TELEGRAM (opcional) ----------
-// Si dejas vacio el WiFi, el token o el usuario principal ("") Telegram queda DESACTIVADO y el ESP32
-// funciona igual que antes (solo con su red LuzVerde).
-// Hasta 4 redes WiFi. El ESP32 las busca, y se conecta a la que tenga mejor senal; si esa no anda
-// (no conecta o Telegram no responde), prueba con la siguiente. Las ranuras vacias ("") se ignoran.
-// Si la red no tiene contrasena, dejala en "".
+// ---------- CONTROL DESDE LEJOS POR SI NO ESTAMOS AL LADO DEL PROYECTO ----------
 const int WIFI_CANTIDAD = 4;
 const char* WIFI_SSIDS[WIFI_CANTIDAD] = {
   "Estudiantes",   // WiFi 1 (la de la escuela)
-  "",              // WiFi 2: nombre de la red
-  "",              // WiFi 3: nombre de la red
-  ""               // WiFi 4: nombre de la red
+  "",              
+  "",             
 };
 const char* WIFI_PASSES[WIFI_CANTIDAD] = {
-  "educar_2018",   // contrasena del WiFi 1
-  "",              // contrasena del WiFi 2
-  "",              // contrasena del WiFi 3
-  ""               // contrasena del WiFi 4
+  "educar_2018",  
+  "",              
+  "",             
 };
-const char* TELEGRAM_TOKEN    = "9054026537:AAHJZVZfDDw81rMVI3uvw3YrIBGHoG5_H5o";   // el token que te da @BotFather, ej: "123456789:AAH..."
-const char* TELEGRAM_OWNER    = "emwchgn";   // @usuario del administrador PRINCIPAL (sin @). Es el unico que puede agregar/quitar admins
+const char* TELEGRAM_TOKEN    = "xxxx";  
+const char* TELEGRAM_OWNER    = "xxxx";   
 
 const size_t RANKING_MAX = 15;             // cuantos puestos guardamos como maximo
 
