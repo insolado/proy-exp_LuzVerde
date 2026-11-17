@@ -27,12 +27,12 @@ const char* CLAVE_ADMIN = "xxxxx";  // contrasena del panel: http://192.168.4.1/
 // ---------- CONTROL DESDE LEJOS POR SI NO ESTAMOS AL LADO DEL PROYECTO ----------
 const int WIFI_CANTIDAD = 4;
 const char* WIFI_SSIDS[WIFI_CANTIDAD] = {
-  "Estudiantes",   // WiFi 1 (la de la escuela)
+  "xxxxx",   // WiFi 1 (la de la escuela)
   "",              
   "",             
 };
 const char* WIFI_PASSES[WIFI_CANTIDAD] = {
-  "educar_2018",  
+  "xxxx",  
   "",              
   "",             
 };
